@@ -1,0 +1,8 @@
+
+(make sure that you activated virtual environment)
+
+open terminal, run the command:
+	python3 manage.py runserver
+
+open a web browser, navigate to the following url:
+	127.0.0.1:8000/index/
