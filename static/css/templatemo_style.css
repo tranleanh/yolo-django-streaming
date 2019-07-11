@@ -1,0 +1,232 @@
+/* 
+
+templatemo 419 black white
+
+http://www.templatemo.com/preview/templatemo_419_black_white
+
+http://stackoverflow.com/questions/10525744/css-table-cell-equal-width
+
+*/
+* {	font-family: 'Open Sans', sans-serif; }
+
+html, body { height: 100%; }
+
+.green { color: #3B3; }
+.blue { color: #09E; }
+
+h1, h2 { margin-bottom: 20px; }
+
+h2 { font-size: 24px; }
+.templatemo-container {
+	display: table;
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+}
+.left-container {
+	display: table-cell;
+	float: none;
+	width: 25%;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 0;
+}
+.right-container {
+	display: table-cell;
+	float: none;
+	width: 75%;
+	padding-bottom: 20px;
+	padding-left: 0;
+	padding-right: 30px;
+	vertical-align: top;
+}
+.black-bg {
+	color: white;
+	background-color: black;
+}
+.white-bg {	background-color: white; }
+.tm-left-inner-container { margin-right: 30px; }
+.tm-right-inner-container {
+	margin-left: 30px;
+	/*max-width: 710px;*/
+	max-width: 1200px;
+}
+.templatemo-logo { 
+	display: table;
+	overflow: hidden;
+	table-layout: fixed;
+	width: 100%
+}
+.logo-left-container {
+	display: table-cell;
+	width: 38%;
+}
+.logo-right-container {
+	display: table-cell;
+	width: 62%;
+}
+.templatemo-logo h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 250px;
+}
+.templatemo-logo .col-lg-6, .templatemo-logo .col-md-6, .templatemo-logo .col-sm-6 {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 20px;
+}
+.logo-left {
+	border-top: 1px solid gray;
+	border-right: none; 
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+	float: right;
+	padding: 20px 30px 20px 100px;
+	text-align: right;
+}
+.logo-right {
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left: none;
+	float: left;
+	padding: 20px 100px 20px 30px;
+}
+
+.templatemo-nav {
+	clear: both;
+	font-size: 16px;
+	font-weight: 300;
+	float: right;
+	min-width: 250px;
+}
+.templatemo-nav>li>a {
+	border: 2px solid #8C8C8C;
+	border-radius: 8px;
+	color: white;
+	padding: 15px 50px;
+	margin-bottom: 20px;
+	transition: background-color 0.3s;
+}
+.templatemo-nav>li>a:hover, .templatemo-nav>li>a:focus, .templatemo-nav>li>a.active {
+	background-color: #fff;
+	color: #000;
+	font-weight: 700;
+}
+.templatemo-nav>li>a>.fa { margin-right: 10px; }
+.templatemo-header {
+	clear: both;
+	font-size: 30px;
+	margin-top: 0;
+}
+article { margin-top: 40px; }
+article p {
+	margin-bottom: 15px;
+	text-align: justify;
+}
+footer {
+	margin-top: 40px;
+	overflow: hidden;
+}
+footer p { margin-bottom: 0; }
+footer .col-lg-6, footer .col-md-6 {
+	padding-left: 0;
+	padding-right: 0;
+}
+.templatemo-social { text-align: right; }
+.templatemo-social i {
+	border: 1px solid #ccc;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	transition: background-color 0.3s;
+}
+.templatemo-social a { color: #757575; }
+.templatemo-social a:hover i {
+	background-color: #000;
+	color: #fff;
+}
+.row .templatemo-item {	margin-top: 0; }
+.templatemo-item p { margin-top: 20px; }
+.templatemo-item ul { margin-bottom: 20px; }
+.templatemo-item ul li { list-style: none; }
+.fa.templatemo-service-icon { font-size: 100px; }
+
+.templatemo-testimonial { overflow: hidden; }
+.templatemo-testimonial .fa {
+	color: #C8B55E;
+	padding: 5px;
+}
+.templatemo-border-left {
+	border-left: 3px solid #C8B55E;
+	padding-left: 10px;
+}
+.templatemo-border-right {
+	border-right: 3px solid #C8B55E;
+	padding-right: 10px;
+	text-align: right;
+}
+.templatemo-testimonial footer { color: #777; }
+.templatemo-testimonial footer:before {	content: '\2014 \00A0'; }
+.form-control:focus {
+	border-color: #DEB215;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(234, 231, 60, 0.6);
+}
+iframe { border: none; }
+#map-canvas {
+    height: 350px;
+    margin-bottom: 30px;
+}
+.margin-bottom-60 {	margin-bottom: 60px; }
+
+/* Media Queries
+----------------------------------------*/
+@media screen and (max-width: 991px) {
+	.templatemo-social {
+		margin-top: 15px;
+		text-align: left;
+	}
+}
+@media screen and (max-width: 767px) {
+	.templatemo-logo, .templatemo-container { display: block; }
+	.logo-left-container, .logo-right-container, .left-container, .right-container {
+		display: block;
+		width: 100%;
+	}
+	.left-container, .right-container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.logo-left, .logo-right, .templatemo-nav { float: none; }
+	.logo-left {
+		border-right: 1px solid gray; 
+		text-align: center;
+		margin-bottom: 30px;
+		padding: 20px;
+	}
+	.logo-right {
+		border-left: 1px solid gray;
+		text-align: center;
+		margin-bottom: 30px;
+		padding: 20px;
+	}
+	.tm-left-inner-container { margin-right: 0; }
+	.tm-right-inner-container {	margin-left: 0;	}
+	.templatemo-nav { max-width: 100%; }
+	.templatemo-nav>li>a {
+		margin-bottom: 5px;
+		text-align: center;
+	}
+	h1 {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	.templatemo-logo h1 {
+		border: none;
+		max-width: none;
+	}
+	.left-container, .right-container {	padding-top: 40px; }
+	.templatemo-logo .col-lg-6, .templatemo-logo .col-md-6, .templatemo-logo .col-sm-6 { padding-top: 0; }
+}
