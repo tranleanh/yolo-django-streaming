@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from webcam.views import index, video_feed_1, video_feed_2, camera_1, camera_2
-from webcam.views import database, search
+# from webcam.views import database, search
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,7 +27,7 @@ urlpatterns = [
     path('video_feed_2/', video_feed_2, name="video-feed-2"),
     path('index/camera1/', camera_1),
     path('index/camera2/', camera_2),
-    path('index/database/', database),
-    path('index/database/50latest', database),
-    path('index/database/search', search),
+    # path('index/database/', database),
+    # path('index/database/50latest', database),
+    # path('index/database/search', search),
 ]
