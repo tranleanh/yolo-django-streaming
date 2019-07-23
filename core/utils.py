@@ -7,7 +7,7 @@
 #   File name   : utils.py
 #   Author      : YunYang1994
 #   Created date: 2019-02-28 13:14:19
-#   Description :
+#   Description : 2019-07-23 Modified by Tran Le Anh
 #
 #================================================================
 
@@ -119,8 +119,10 @@ def bboxes_iou(boxes1, boxes2):
 
 def read_pb_return_tensors(graph, pb_file, return_elements):
 
-    with tf.gfile.FastGFile(pb_file, 'rb') as f:
-        frozen_graph_def = tf.GraphDef()
+    # with tf.gfile.FastGFile(pb_file, 'rb') as f:
+    with tf.io.gfile.GFile(pb_file, 'rb') as f:
+        # frozen_graph_def = tf.GraphDef()
+        frozen_graph_def = tf.compat.v1.GraphDef()
         frozen_graph_def.ParseFromString(f.read())
 
     with graph.as_default():
@@ -207,6 +209,3 @@ def postprocess_boxes(pred_bbox, org_img_shape, input_size, score_threshold):
     coors, scores, classes = pred_coor[mask], scores[mask], classes[mask]
 
     return np.concatenate([coors, scores[:, np.newaxis], classes[:, np.newaxis]], axis=-1)
-
-
-
