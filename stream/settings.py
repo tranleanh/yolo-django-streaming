@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+# 2019-07-23 Modified by Tran Le Anh
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -76,9 +78,26 @@ WSGI_APPLICATION = 'stream.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # MySQL database engine class.
+        'ENGINE': 'django.db.backends.mysql',
+        # MySQL database host ip.
+        'HOST': '127.0.0.1',
+        # port number.
+        'PORT': '3306',
+        # database name.
+        'NAME': 'ocst',
+        # user name.
+        'USER': 'root',
+        # password
+        'PASSWORD': 'password',
+        # connect options
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",},
     }
 }
 
@@ -107,13 +126,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+# USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
