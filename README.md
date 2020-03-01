@@ -20,6 +20,15 @@ $ python3 manage.py runserver
 ```bashrc
 http://127.0.0.1:8000/index
 ```
+## RESULT
+- Camera 1:
+
+![picture](images/camera1.png)
+
+- Camera 2:
+
+![picture](images/camera2.png)
+
 ## NOTE:
 - The 2 camera ids in the source code are "0" and "2" (for my computer). 
 - You should change them for running on any other computers. Go to webcam/views.py then change "cam_id".
