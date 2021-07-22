@@ -52,9 +52,9 @@ def stream_1():
 				print("  " + infor)
 				frame = cv2.putText(frame,infor,(20,(row+1)*35), cv2.FONT_HERSHEY_SIMPLEX, 1,(255,255,255),2,cv2.LINE_AA)
 
-		cv2.imwrite('demo.jpg', frame)
+		cv2.imwrite('currentframe.jpg', frame)
 		yield (b'--frame\r\n'
-			   b'Content-Type: image/jpeg\r\n\r\n' + open('demo.jpg', 'rb').read() + b'\r\n')
+			   b'Content-Type: image/jpeg\r\n\r\n' + open('currentframe.jpg', 'rb').read() + b'\r\n')
 
 def video_feed_1(request):
 	return StreamingHttpResponse(stream_1(), content_type='multipart/x-mixed-replace; boundary=frame')
@@ -81,9 +81,9 @@ def stream_2():
 				print("  " + infor)
 				frame = cv2.putText(frame,infor,(20,(row+1)*35), cv2.FONT_HERSHEY_SIMPLEX, 1,(255,255,255),2,cv2.LINE_AA)
 		
-		cv2.imwrite('demo.jpg', frame)
+		cv2.imwrite('currentframe.jpg', frame)
 		yield (b'--frame\r\n'
-			   b'Content-Type: image/jpeg\r\n\r\n' + open('demo.jpg', 'rb').read() + b'\r\n')
+			   b'Content-Type: image/jpeg\r\n\r\n' + open('currentframe.jpg', 'rb').read() + b'\r\n')
 
 def video_feed_2(request):
 	return StreamingHttpResponse(stream_2(), content_type='multipart/x-mixed-replace; boundary=frame')
@@ -93,7 +93,7 @@ def video_feed_2(request):
 obj_classes = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "sofa", "pottedplant", "bed", "diningtable", "toilet", "tvmonitor", "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"]
 
 return_elements = ["input/input_data:0", "pred_sbbox/concat_2:0", "pred_mbbox/concat_2:0", "pred_lbbox/concat_2:0"]
-pb_file         = "./yolov3_coco.pb"
+pb_file         = "./yolov3_weight/yolov3_coco.pb"
 num_classes     = 80
 input_size      = 416
 graph           = tf.Graph()
