@@ -23,11 +23,11 @@ http://127.0.0.1:8000/index
 ## RESULT
 - Camera 1:
 
-![picture](images/camera1.png)
+![picture](images/cam1.png)
 
 - Camera 2:
 
-![picture](images/camera2.png)
+![picture](images/cam2.png)
 
 ## NOTE:
 - The 2 camera ids in the source code are "0" and "2" (for my computer). 
