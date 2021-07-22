@@ -23,7 +23,7 @@ $ python manage.py runserver
 ```bashrc
 http://127.0.0.1:8000/index
 ```
-## 2. What should happen then will be
+## 2. What should happen then?
 (don't worry, my face will not be on your screen)
 - Camera 1:
 
