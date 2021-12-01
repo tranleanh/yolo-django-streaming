@@ -15,11 +15,11 @@ https://drive.google.com/drive/u/1/folders/1apB-yPIxxzC9D6_iAaQrXWuGpbWIK6Lp
 ```bashrc
 $ pip install -r requirements.txt
 ```
-2. Run program: 
+3. Run program: 
 ```bashrc
 $ python manage.py runserver
 ```
-3. Open any web browser and navigate to URL (home page): 
+4. Open any web browser and navigate to URL (home page): 
 ```bashrc
 http://127.0.0.1:8000/index
 ```
