@@ -42,6 +42,15 @@ http://127.0.0.1:8000/index
 - The yolov3 implementation was borrowed from [YunYang1994](https://github.com/YunYang1994/tensorflow-yolov3) 
 
 
+## Cite This Project
+```bashrc
+@article{tran2020yolostream,
+  title={Object Detection Streaming and Data Management on Web Browser},
+  author={Tran, Le-Anh},
+  journal={Technical Report},
+  year={2020}
+}
+```
 
 Good luck.
 
